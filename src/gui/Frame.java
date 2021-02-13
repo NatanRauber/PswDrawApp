@@ -1,4 +1,4 @@
-package drawapp.views;
+package gui;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
@@ -14,7 +14,8 @@ public class Frame extends JFrame {
     public Frame() {
         /// configure frame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 500, 500);
+        setBounds(100, 100, 600, 500);
+        setExtendedState(getExtendedState() | JFrame.MAXIMIZED_BOTH);
 
         /// create panel
         Panel panel = new Panel();
@@ -35,6 +36,7 @@ public class Frame extends JFrame {
         menuItemPoint.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 panel.selectType(0);
+                panel.stateController = 0;
             }
         });
         menuGeometryType.add(menuItemPoint);
@@ -44,6 +46,7 @@ public class Frame extends JFrame {
         menuItemLine.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 panel.selectType(1);
+                panel.stateController = 0;
             }
         });
         menuGeometryType.add(menuItemLine);
@@ -53,6 +56,7 @@ public class Frame extends JFrame {
         menuItemCircle.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 panel.selectType(2);
+                panel.stateController = 0;
             }
         });
         menuGeometryType.add(menuItemCircle);
@@ -62,6 +66,7 @@ public class Frame extends JFrame {
         menuItemRectangle.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 panel.selectType(3);
+                panel.stateController = 0;
             }
         });
         menuGeometryType.add(menuItemRectangle);
@@ -71,8 +76,19 @@ public class Frame extends JFrame {
         menuItemTriangle.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 panel.selectType(4);
+                panel.stateController = 0;
             }
         });
         menuGeometryType.add(menuItemTriangle);
+
+        /// create and add menu item Quadrilateral
+        JMenuItem menuItemQuadrilateral = new JMenuItem("Quadrilateral");
+        menuItemQuadrilateral.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                panel.selectType(5);
+                panel.stateController = 0;
+            }
+        });
+        menuGeometryType.add(menuItemQuadrilateral);
     }
 }

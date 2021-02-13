@@ -1,15 +1,13 @@
-package drawapp.models;
+package models;
 
 public class Triangle {
     public Point a;
     public Point b;
     public Point c;
-    public Point d;
 
-    public Triangle(Point a, Point b, Point c, Point d) {
+    public Triangle(Point a, Point b, Point c) {
         this.a = a;
         this.b = b;
         this.c = c;
-        this.d = d;
     }
 }

@@ -1,4 +1,4 @@
-package drawapp.models;
+package models;
 
 public class Rectangle {
     public Point a;

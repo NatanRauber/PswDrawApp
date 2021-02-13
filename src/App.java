@@ -1,6 +1,6 @@
-package drawapp;
+// package drawapp;
 
-import drawapp.views.Frame;
+import gui.Frame;
 
 public class App {
     public static void main(String[] args) {
